@@ -1,0 +1,101 @@
+body{
+	/*background-color: black;*/
+	width: 100%;
+	margin-left: 15px;
+	font-family: "Futura"; 
+}
+#predictionContent{
+	margin-left: 15%;
+}
+
+#mIcon{
+	width: 100%;
+	height: 80px;
+	background-color: rgb(138,171,202);
+	margin-bottom: 0;
+}
+
+#mIcon p{
+	margin-left: 15%;
+	font-size: 50px;
+	text-shadow: 1px 1px 1px #000000;
+	color: white;
+}
+#headerDiv{
+	/*background-color: rgba(110,110,110, 0.5);*/
+	background-color: #f0f3f5;
+	width: 100%;
+	height: 60px;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+    margin-top: 0px;
+}
+
+#headerDiv li{
+	margin-left: 150px;
+	padding-left: 5px;
+	text-decoration-line: none;
+	list-style-type: none;
+	text-align: center;
+	display: inline;
+	padding-top: 150px;
+}
+
+#headerDiv li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #37a;
+	vertical-align: middle;
+	line-height: 60px; 
+}
+.liLine{
+	display: inline;
+
+}
+#headerDiv ul{
+	width: 80%;
+}
+
+.scorebar{
+	margin-left: 2px;
+	height: 50px;
+	vertical-align: center;
+	margin:auto;
+}
+.scorebar h3{
+	vertical-align: middle;
+	line-height: 50px; 
+	color: rgb(101,147,74);
+}
+.row{
+	width: 80%;
+}
+/*.pic{
+	margin-left: -13px;
+}*/
+.pic img{
+	width: 100%;
+	height: 220px;
+	padding-left: 0px;
+	margin-left: 0px;
+}
+#details{
+	border-bottom: 1px dashed #ddd;
+}
+.entry{
+	margin-bottom: 10px;
+	width: 49%;
+	float: left;
+	
+	margin-right: 10px;
+	padding-right: 1%;
+	/*border-right: 1px dashed #ddd;*/
+}
+.details ul li{
+	list-style-type: none;
+	margin-bottom: 10px;
+	margin-left: -40px;
+}
+.pic h4{
+	text-align: center;
+}

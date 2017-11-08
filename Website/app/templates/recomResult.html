@@ -1,0 +1,92 @@
+<html>
+
+   <head>
+         <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+         <!-- Optional theme -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+         <!-- Latest compiled and minified JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+
+   	<!-- 	<link rel="stylesheet" href="recomResult.css">
+      	<script type = "text/javascript" 
+         src = "recommandRes.js" ></script> -->
+
+   		 <link rel="stylesheet" href="{{ url_for('static', filename = 'recomResult.css') }}">
+      	<script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'recommandRes.js') }}" ></script>
+   </head>
+   
+   <body>
+        <div class = "row" id="mIcon">
+            <p>YoGo!</p>
+            <!-- <p>{{ movie['title'] }}</p> -->
+         </div>
+
+   		  <div class = "row" id= "headerDiv">
+   		 	   <ul>
+   		 		  <div id="li1" class="liLine"><li><a href="http://127.0.0.1:5000/">SEARCH A MOVIE</a></li></div>
+   		 		  <div id="li2" class="liLine"><li><a href="http://127.0.0.1:5000/recommand">FIND SIMILARITY</a></li></div>
+   		 		  <div id="li3" class="liLine"><li><a href="http://127.0.0.1:5000/prediction">PREDICTION</a></li></div>
+   		 	   </ul>
+   		  </div>
+
+        <div id = "reResult">
+        <div class = "row" id= "recommandDiv">
+            <div id="inOrder">
+                <button  type="button" id="socreBut" class="btn btn-default btn-md">SCORE</button>
+                <button  type="button" id="releBut" class="btn btn-default btn-md">RELEVANCE</button>
+            </div>
+           
+
+            <div id="relevance">
+              {%  for key,value in movie.items() %}
+                <div class="movieDetail">
+
+              
+                  <div class="pic">
+                    <img src= {{value['image']}}>
+                  </div>
+                
+                  <div class="info">
+                    
+                   <div class="movieT"><p>{{ value['title']  }}</p></div>
+                    <div class="movieA"><p><b>Score:</b>{{ value['new_rating'] }}</p></div>
+                    
+
+                  
+                  </div>  
+                </div>
+                {%endfor%}
+            </div>
+
+            <div id="score">
+                 {%  for key,value in movie1.items() %}
+                <div class="movieDetail">
+
+              
+                  <div class="pic">
+                    <img src= {{value['image']}}>
+                  </div>
+                
+                  <div class="info">
+                  
+                    <div class="movieT"><p>{{ value['title']  }}</p></div>
+                   
+                    <div class="movieA"><p><b>Score:</b>{{ value['new_rating'] }}</p></div> 
+                     
+                  
+                  </div>  
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+      </div>
+   </body>
+</html>

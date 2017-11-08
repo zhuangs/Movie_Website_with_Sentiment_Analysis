@@ -1,0 +1,120 @@
+body{
+	/*background-color: black;*/
+	padding-top: 30px;
+}
+
+#mIcon{
+	width: 150px;
+	height: 80px;
+	margin-left: 10%;
+	/*background-color: yellow;*/
+}
+
+#mIcon p{
+	font-size: 50px;
+	text-shadow: 2px 2px 2px #000000;
+}
+
+
+
+#headerDiv{
+	background-color: rgba(110,110,110, 0.5);
+	width: 80%;
+	height: 60px;
+	margin-left: 10%;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#headerDiv li{
+	text-decoration-line: none;
+	list-style-type: none;
+		text-align: center;
+}
+
+#headerDiv li a{
+	text-decoration: none;
+	font-size: 20px;
+
+
+}
+
+.liLine{
+	/*background-color: yellow;*/
+	height: 40px;
+	width: 20%;
+	float: left;
+	margin: 10px 5% 10px 5%;
+
+}
+
+.liLine:hover{
+	background-color: white;
+}
+
+
+/*--------------------------------*/
+
+
+#eightmore{
+	height: 280px;
+	width: 80%;
+	margin-left: 10%;
+	background-color: yellow;
+}
+
+
+#sixmore{
+	height: 280px;
+	width: 80%;
+	margin-left: 10%;
+	background-color: green;
+}
+
+
+#sixless{
+	height: 280px;
+	width: 80%;
+	margin-left: 10%;
+	background-color: blue;
+}
+
+
+.scorebar{
+	width: 100%;
+	height: 30px;
+	background-color: pink;
+	margin: 0;
+}
+
+.movieDetail{
+	width: 100%;
+	height: 250px;
+
+}
+
+
+.pic{
+	height: 100%;
+	width: 30%;
+	text-align: center;
+	float: left;
+}
+
+.info{
+	width: 70%;
+	float: left;
+}
+
+.pic img{
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+

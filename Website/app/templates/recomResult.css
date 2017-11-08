@@ -1,0 +1,159 @@
+body{
+	/*background-color: black;*/
+	width: 100%;
+	margin-left: 15px;
+	font-family: "Futura"; 
+}
+#reResult{
+	margin-left: 15%;
+}
+
+#mIcon{
+	width: 100%;
+	height: 80px;
+	background-color: rgb(138,171,202);
+	margin-bottom: 0;
+}
+
+#mIcon p{
+	margin-left: 15%;
+	font-size: 50px;
+	text-shadow: 1px 1px 1px #000000;
+	color: white;
+}
+#headerDiv{
+	/*background-color: rgba(110,110,110, 0.5);*/
+	background-color: #f0f3f5;
+	width: 100%;
+	height: 60px;
+	opacity: 0.5;
+    filter: alpha(opacity=50);
+    margin-top: 0px;
+}
+
+#headerDiv li{
+	margin-left: 150px;
+	padding-left: 5px;
+	text-decoration-line: none;
+	list-style-type: none;
+	text-align: center;
+	display: inline;
+	padding-top: 150px;
+}
+
+#headerDiv li a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #37a;
+	vertical-align: middle;
+	line-height: 60px; 
+}
+.liLine{
+	display: inline;
+
+}
+#headerDiv ul{
+	width: 80%;
+}
+
+/*--------------------------------*/
+
+#recommandDiv{
+	/*background-color: red;*/
+
+	width: 80%;
+	height: 1000px;
+}
+
+#inOrder{
+	/*background-color: green;*/
+	width: 100%;
+	height: 50px;
+	text-align: right;
+}
+
+#inorder button{
+	margin-top: 30px;
+	height: 25px;
+	padding-top: 2px;
+	margin-top: 2px;
+	color: rgba(0,0,0,0.3);
+	background-color: rgba(255,255,255.0.5);
+}
+
+#score{
+	width: 100%;
+	height: 900px;
+	display: none;
+	background-color: blue;
+}
+
+#relevance{
+	width: 100%;
+	height: 900px;
+	
+	/*background-color: yellow;*/
+}
+
+
+.movieDetail{
+	/*background-color: yellow;*/
+	width: 30%;
+	height: 350px;
+	margin-bottom: 20px;
+	margin-left: 1%;
+	margin-right: 2%;
+	 /*border-style: solid;*/
+	 /*border-color: black;*/
+	float: left;
+	padding: 0;
+}
+
+
+
+.pic{
+	/*background-color: pink;*/
+	float: left;
+	width: 100%;
+	height: 75%;
+	text-align: center;
+
+}
+
+.pic img{
+	/*width: 100%;*/
+	height: 100%;
+}
+
+.info{
+	/*background-color: blue;*/
+	float: left;
+	width: 100%;
+	height: 25%;
+	padding-top: 0;
+	padding-left: 10%;
+}
+
+.movieT{
+	margin-top: 0;
+	height: 50%;
+	width: 90%;
+	/*background-color: blue;*/
+	float: left;
+	font-size: 20px;
+}
+
+.movieA{
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 50%;
+	width: 90%;
+	/*background-color: black;*/
+	float: left;
+}
+.row{
+	width: 80%;
+}
+#inOrder button{
+	background-color: rgb(138,171,202);
+}

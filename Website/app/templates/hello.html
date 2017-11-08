@@ -1,0 +1,57 @@
+<html>
+
+   <head>
+         <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+         <!-- Optional theme -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+         <!-- Latest compiled and minified JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   		<!-- link rel="stylesheet" href="hello.css">
+      	<script type = "text/javascript" 
+         src = "hello.js" ></script> -->
+
+   		 <link rel="stylesheet" href="{{ url_for('static', filename = 'hello.css') }}">
+      	<script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
+   </head>
+   
+   <body>
+         <video autoplay   id="bgvid" loop>
+            <source src="{{ url_for('static', filename = 'backgroud.mp4') }} "type="video/mp4">
+            <!-- <source src="backgroud.mp4" type="video/mp4"> -->
+            <!-- <source src="background.ogg" type="video/ogg"> -->
+
+         </video>
+         <div class = "row" id="mIcon">
+            <p>YoGo!</p>
+            <!-- <p>{{ data }}</p> -->
+         </div>
+
+   		 <div class = "row" id= "headerDiv">
+   		 	<ul>
+   		 		<div id="li1" class="liLine"><li><a href="http://127.0.0.1:5000/">SEARCH A MOVIE</a></li></div>
+   		 		<div id="li2" class="liLine"><li><a href="http://127.0.0.1:5000/recommand">FIND SIMILARITY</a></li></div>
+   		 		<div id="li3" class="liLine"><li><a href="http://127.0.0.1:5000/prediction">PREDICTION</a></li></div>
+   		 	</ul>
+   		 </div>
+         <div id = "helloPage">
+   		<div class = "row" id="searchDiv">
+            <form action = "http://localhost:5000/movie" method = "GET">
+   		 	<div class="form-group" id="searchInput">
+               <input type="text" class="form-control" name="movieName" placeholder="movie name">
+            </div>
+            
+            <div class="form-group" id="searchButton">
+     			   <input type = "submit"  class="form-control" value = "SEARCH" />
+            </div>
+     		
+        </form>
+      </div>
+      </div>
+   </body>
+   
+</html>

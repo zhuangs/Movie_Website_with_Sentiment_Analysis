@@ -1,0 +1,110 @@
+<html>
+
+   <head>
+
+   		<link rel="stylesheet" href="{{ url_for('static', filename = 'movieProfile1.css') }}">
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   		<script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'movieProfile.js') }}" ></script>
+
+         <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+         <!-- Optional theme -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+         <!-- Latest compiled and minified JavaScript -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+   		 <!-- <link rel="stylesheet" href="movieProfile.css"> -->
+      	
+   </head>
+
+   <body>
+         <div class = "row" id="mIcon">
+            <p>YoGo!</p>
+            <!-- <p>{{ data }}</p> -->
+         </div>
+
+   		 <div class = "row" id= "headerDiv">
+   		 	<ul>
+   		 		<div id="li1" class="liLine"><li><a href="http://127.0.0.1:5000/" >SEARCH A MOVIE</a></li></div>
+   		 		<div id="li2" class="liLine"><li><a href="http://127.0.0.1:5000/recommand">FIND SIMILARITY</a></li></div>
+   		 		<div id="li3" class="liLine"><li><a href="http://127.0.0.1:5000/prediction">PREDICTION</a></li></div>
+   		 	</ul>
+   		 </div>
+		<div id = "formal">
+		<div class = "row" id = "profile">
+			<div id = "title"><h2>{{ details["title"] }}</h2> </div>
+			<div id = "content" >
+				<div class = "col-md-4" id = "image"> 
+					<img src="{{ details['image'] }} " class="img-rounded">
+				</div>
+				<div class = "col-md-6" id = "details">
+					<ul>
+						<li><b>Director:</b> {{details["director"]}}</li>
+						<li><b>Actors:</b>{{details["actor1"]}}/{{details["actor2"]}}/{{details["actor3"]}}
+						</li>
+						<li><b>Genre:</b> {{details["genre"]}}</li>
+						<li><b>Country:</b>{{details["country"]}}</li>
+						<li><b>Language:</b>{{details["language"]}}</li>
+						<li><b>Content Rating:</b>{{details["content_rating"]}}</li>
+					</ul>
+				</div>
+				<div class = "col-md-2" id = "score">
+					<ul>
+						<li><b>IMDB Score:</b>{{details["imdb_rating"]}}/10</li>
+						<li><b>Score By Us:</b> {{details["new_rating"]}}/5</li> 
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class = "row" id="recommendation">
+			<div id="recommendationTitle">
+				<h3>Your recommendations: you may also like these movies</h4>
+			</div>
+			<div id = "recommendationMovie">
+				 {%  for key,value in recomList.items() %}
+				<div class = "re col-md-3">
+					<img src={{ value['image'] }} alt="..." class="img-rounded">
+					<h5>{{value["title"]}}</h5>
+				</div>
+				{%endfor%}
+				<!-- <div class = "re col-md-3">
+					<img src={{ recomList['image'] }} alt="..." class="img-rounded">
+					<h5>{{recomList["title"]}}</h5>
+				</div>
+				<div class = "re col-md-3">
+					<img src={{ recomList['image'] }} alt="..." class="img-rounded">
+					<h5>{{recomList["title"]}}</h5>
+				</div>
+				<div class = "re col-md-3">
+					<img src={{ recomList['image'] }} alt="..." class="img-rounded">
+					<h5>{{recomList["title"]}}</h5>
+				</div> -->
+			</div>
+		</div>
+
+		<div class = "row" id = "review">
+			<div id="reviewTitle">
+				<h3>See reviews of this movie</h4>
+			</div>
+			<div class = "reviewList">
+				<p class = "userName">user1 said:</p>
+				<p>{{reviewList["review1"]}}</p>
+			</div>
+			<div class = "reviewList">
+				<p class = "userName">user2 said:</p>
+				<p>{{reviewList["review2"]}}</p>
+			</div>
+			<div class = "reviewList">
+				<p class = "userName">user3 said:</p>
+				<p>{{reviewList["review3"]}}</p>
+			</div>
+		</div>
+		</div>
+       
+   </body>
+   
+</html>
